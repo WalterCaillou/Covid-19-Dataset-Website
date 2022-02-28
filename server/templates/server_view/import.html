@@ -1,0 +1,44 @@
+{% load static %}
+<head>
+
+    <style>
+        h1{
+            height:35px;
+            width:240px;
+            text-align: center;
+            border-radius: 5px;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffffff;
+            background-color: #1E77BD;   
+            box-shadow: 3px 3px 3px #04345C;      
+            z-index: 1;
+        }
+        body{
+            position: relative;
+            background-color: #10564F;
+        }
+    </style>
+</head>
+<body>
+    <header> 
+        <h1>
+            Importing
+            <span id = "dots">.</span>
+            <script>
+                var dots = window.setInterval( function() {
+                    var dots = document.getElementById("dots");
+                    if (dots.innerHTML.length > 2) 
+                        dots.innerHTML = "";
+                    else
+                        dots.innerHTML += ".";
+                }, 500);
+            </script>
+        </h1>
+    </header>
+    <meta http-equiv="refresh" 
+        content="2; url = http://127.0.0.1:8000/search" />
+</body>
